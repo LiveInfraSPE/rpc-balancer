@@ -4,9 +4,9 @@ import (
 	"flag"
 	"fmt"
 	_ "net/http/pprof"
-	"rpb-balancer/rpcbalancer"
 	"sync"
 
+	"github.com/LiveInfraSPE/rpc-balancer/rpcbalancer"
 	log "github.com/sirupsen/logrus"
 )
 
