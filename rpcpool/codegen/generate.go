@@ -72,7 +72,7 @@ func GenerateEthClient(clientPkg string, source_file string, wrapperTemplate str
 			}
 
 			name := funcDecl.Name.Name
-			if !funcDecl.Name.IsExported() || name == "Close" {
+			if !funcDecl.Name.IsExported() || name == "Close" || name == "Client" {
 				continue
 			}
 

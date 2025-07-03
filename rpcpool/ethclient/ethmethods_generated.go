@@ -14,37 +14,6 @@ import (
 )
 
 
-func (rp *Client) Client() (*rpc.Client) {
-	
-	results, err := rp.retry(func(client *ethclient.Client) ([]interface{}, error) {
-	
-		
-		r0 := client.Client()
-		
-		return []interface{}{ r0 }, nil
-		
-		
-	}, 1)
-	if err != nil {
-		
-		return nil
-		
-	}
-	
-	
-	var ok bool
-	
-	
-	r0, ok := results[0].(*rpc.Client); if !ok { return nil }
-	
-	
-		
-		return r0
-		
-	
-	
-}
-
 func (rp *Client) ChainID(ctx context.Context) (*big.Int, error) {
 	
 	results, err := rp.retry(func(client *ethclient.Client) ([]interface{}, error) {
